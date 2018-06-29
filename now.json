@@ -1,0 +1,8 @@
+{
+  "name": "convert-qfx",
+  "alias": "convert-qfx",
+  "env": {
+    "ALGOLIA_ID": "@algolia_id",
+    "ALGOLIA_KEY": "@algolia_key"
+  }
+}
