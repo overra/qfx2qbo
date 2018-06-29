@@ -6,6 +6,7 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import Disqus from "disqus-react";
 
 const Index = ({ classes }) => (
   <div className={classes.container}>
@@ -34,6 +35,16 @@ const Index = ({ classes }) => (
         </Typography>
       </ExpansionPanelDetails>
     </ExpansionPanel>
+    <div className={classes.comments}>
+      <Disqus.DiscussionEmbed
+        shortname="https-convert-qfx-now-sh"
+        config={{
+          identifier: "convert-qfx-to-qbo",
+          title: "QFX to QBO Conversion",
+          url: "https://convert-qfx.now.sh"
+        }}
+      />
+    </div>
   </div>
 );
 
@@ -59,7 +70,8 @@ const styles = theme => ({
     },
     listStyleType: "none",
     padding: 0
-  }
+  },
+  comments: { width: 600, margin: 16 }
 });
 
 export default withStyles(styles)(Index);
