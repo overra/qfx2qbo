@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <html lang="en" dir="ltr">
         <Head>
-          <title>QFX to QBO Converter</title>
+          <title>Quickbooks QFX to QBO Converter</title>
           <meta charSet="utf-8" />
           {/* Use minimum-scale=1 to enable GPU rasterization */}
           <meta
