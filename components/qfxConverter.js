@@ -33,7 +33,7 @@ const renderSearchField = ({ search, results, classes }) => ({
   <div className={classes.container}>
     <TextField
       fullWidth
-      label="Choose Your Bank"
+      label="Start typing your bank name here"
       className={classes.input}
       inputProps={{
         ...getInputProps({
