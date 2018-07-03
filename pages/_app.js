@@ -5,10 +5,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import JssProvider from "react-jss/lib/JssProvider";
 import getPageContext from "../src/getPageContext";
 
-if (process.browser && "serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js");
-}
-
 class MyApp extends App {
   constructor(props) {
     super(props);
@@ -22,6 +18,10 @@ class MyApp extends App {
     const jssStyles = document.querySelector("#jss-server-side");
     if (jssStyles && jssStyles.parentNode) {
       jssStyles.parentNode.removeChild(jssStyles);
+    }
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js");
     }
   }
 

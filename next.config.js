@@ -14,10 +14,19 @@ module.exports = {
       config.plugins.push(
         new SWPrecacheWebpackPlugin({
           cacheId: "convert-qfx",
-          dontCacheBustUrlsMatching: /\.\w{8}\./,
-          filename: "service-worker.js",
+          verbose: true,
+          runtimeCaching: [
+            {
+              handler: "networkFirst",
+              urlPattern: /^https?.*/
+            }
+          ],
           minify: true,
-          staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/]
+          staticFileGlobsIgnorePatterns: [
+            /\.map$/,
+            /asset-manifest\.json$/,
+            /\.next\//
+          ]
         })
       );
     }
