@@ -17,7 +17,8 @@
     "react-dom": "^16.4.1",
     "react-dropzone": "^4.2.12",
     "react-emotion": "^9.2.4",
-    "react-jss": "^8.6.0"
+    "react-jss": "^8.6.0",
+    "sw-precache-webpack-plugin": "^0.11.5"
   },
   "scripts": {
     "dev": "next",
