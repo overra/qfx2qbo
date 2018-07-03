@@ -5,6 +5,12 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import JssProvider from "react-jss/lib/JssProvider";
 import getPageContext from "../src/getPageContext";
 
+(function() {
+  if (navigator && "serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/service-worker.js");
+  }
+})();
+
 class MyApp extends App {
   constructor(props) {
     super(props);
