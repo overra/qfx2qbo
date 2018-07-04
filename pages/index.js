@@ -57,7 +57,7 @@ const styles = theme => ({
   container: {
     display: "flex",
     width: "100vw",
-    height: "100vh",
+    padding: 16,
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center"
